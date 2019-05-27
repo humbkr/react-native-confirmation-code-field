@@ -36,6 +36,7 @@ class ConfirmationCodeInput extends PureComponent<Props, State> {
     maskSymbol: '',
     CellComponent: Cell,
     blurOnSubmit: true,
+    disableCursor: false,
   };
 
   _input = createRef();
@@ -105,7 +106,8 @@ class ConfirmationCodeInput extends PureComponent<Props, State> {
   };
 
   renderCursor() {
-    if (this.state.isFocused) {
+    const { disableCursor } = this.props
+    if (this.state.isFocused && !disableCursor) {
       return <Cursor />;
     }
 
@@ -308,6 +310,7 @@ if (process.env.NODE_ENV !== 'production') {
     keyboardType: TextInputNative.propTypes.keyboardType,
     maskSymbol: PropTypes.string,
     blurOnSubmit: PropTypes.bool,
+    disableCursor: PropTypes.bool,
   };
 }
 

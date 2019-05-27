@@ -21,6 +21,7 @@
     - [`inputPosition?: 'left' | 'right' | 'center' | 'full-width'`](#inputposition-left--right--center--full-width)
     - [`variant?: 'border-box' | 'border-circle' | 'border-b' | 'clear'`](#variant-border-box--border-circle--border-b--clear)
     - [`blurOnSubmit?: boolean`](#bluronsubmit-boolean)
+    - [`disableCursor?: boolean`](#disable-cursor)
   - [Customize props](#customize-props)
     - [`containerProps?: ViewProps`](#containerprops-viewprops)
     - [`inputProps?: TextInputProps`](#inputprops-textinputprops)
@@ -63,6 +64,10 @@ Default code value, must be the same length as `codeLength`
 ### `blurOnSubmit?: boolean`
 
 Control the focus after submitting. Default `true`
+
+### `disableCursor?: boolean`
+
+Disable the cell cursor. Default `false`
 
 ## Style props
 
